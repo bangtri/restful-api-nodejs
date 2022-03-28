@@ -1,0 +1,21 @@
+{
+    "realm": "nodejs",
+    "auth-server-url": "https://localhost:8080/auth/",
+    "ssl-required": "external",
+    "resource": "nodejs",
+    "verify-token-audience": false,
+    "credentials": {
+        "secret": "ADtAUScX8FCWEXvOOz7doDUBZzyO3KpF"
+    },
+    "use-resource-role-mappings": true,
+    "confidential-port": 0,
+    "policy-enforcer": {},
+    "CLIENT_ID": "nodejs",
+    "CLIENT_DB_ID": "beded2b9-24b7-43c6-abdd-eda39c2d5438",
+    "GRANT_TYPE": "password",
+    "GRANT_TYPE_PAT": "client_credentials",
+    "USERNAME_ADMIN": "nodejs",
+    "PASSWORD_ADMIN": "123456Aa@",
+    "SCOPE_NAME": "Any deafult scope",
+    "bearer-only": true
+}
