@@ -12,12 +12,12 @@ module.exports = {
         const id = req.params.id;
         User.findById(id, (result) => {
             if (id) {
-                if(result.length > 0){
+                if (result.length > 0) {
                     res.send({ error: false, data: result[0], message: 'success' });
-                }else{
+                } else {
                     res.send({ error: false, data: result, message: 'success' });
                 }
-            }else{
+            } else {
                 res.status(400).send({ error: true, message: 'Please enter ID' });
             }
         });

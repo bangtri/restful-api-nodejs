@@ -23,5 +23,5 @@ app.use(keycloak.middleware({ logout: '/logout' }))
 require("./src/router/router")(app);
 app.listen(port);
 app.get('/', function (req, res) {
-    return res.send({ error: false, message: 'Restful API with NodeJS , Express, MySQL' })
+    return res.send({ error: false, message: 'Restful API with NodeJS , Express, MySQL, Keycloak' })
 });
