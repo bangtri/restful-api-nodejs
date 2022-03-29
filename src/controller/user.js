@@ -13,13 +13,17 @@ module.exports = {
         User.findById(id, (result) => {
             if (id) {
                 if (result.length > 0) {
-                    res.send({ error: false, data: result[0], message: 'success' });
-                } else {
                     res.send({ error: false, data: result, message: 'success' });
                 }
             } else {
                 res.status(400).send({ error: true, message: 'Please enter ID' });
             }
+        });
+    },
+
+    findByName: (req, res) => {
+        User.findByName(req.body.name, (result) => {
+            res.send({ error: false, data: result, message: 'success' });
         });
     }
 

@@ -26,4 +26,14 @@ User.findById = (id, res) => {
     });
 };
 
+User.findByName = (data, res) => {
+    const sql = "SELECT * FROM users where name = ? ";
+    db.query(sql, data, (error, result) => {
+        if (error) {
+            return res(error);
+        }
+        res(result);
+    });
+};
+
 module.exports = User;

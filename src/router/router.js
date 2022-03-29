@@ -3,6 +3,7 @@ module.exports = function (router) {
     var { NodeAdapter } = require("keycloak-nodejs-connect");
     var config = require("../../config.json");
     const keycloak = new NodeAdapter(config)
-    router.get("/users", keycloak.protect('realm:view-user'), User.findAll);
-    router.get("/users/:id", User.findById);
+    router.get("/users", keycloak.protect('realm:verify-identifications'), User.findAll);
+    router.get("/users/:id", keycloak.protect('realm:verify-identifications'), User.findById);
+    router.post("/users/search", keycloak.protect('realm:verify-identifications'), User.findByName);
 };
